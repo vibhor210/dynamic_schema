@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <style>
+        #form{
+            width: 60%;
+            padding: 50px
+            }
+    </style>
+
+    <title>Root2AI_Assignmet</title>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">Root2AI_Assignmet</a>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+    </nav>
+
+    <center>
+        <form method="post" id="form"> {% csrf_token %}
+            <div class="input-group">
+                <span class="input-group-text">Schema Name</span>
+                <textarea class="form-control" name="schema_name" aria-label="With textarea" required></textarea>
+            </div>
+            <div class="input-group" >
+                <span class="input-group-text" style="padding: 0px 21px;">Table Name</span>
+                <textarea class="form-control" name="table_name" aria-label="With textarea" required></textarea>
+            </div>
+            <div class="input-group">
+                <span class="input-group-text">No of Column</span>
+                <textarea class="form-control" name="no_of_column" aria-label="With textarea" required></textarea>
+            </div>
+            <div class="input-group">
+                <span class="input-group-text" style="padding: 0px 24px;">Data Types</span>
+                <textarea class="form-control" name="data_type" aria-label="With textarea" placeholder="Example, for 2 Column, varchar(200) ,serial" required></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary" style="margin: 20px;">Submit</button>
+
+        </form>
+    </center>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    
+  </body>
+</html>
